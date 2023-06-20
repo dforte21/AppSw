@@ -13,7 +13,6 @@
 # include <openssl/aes.h>
 # include <openssl/evp.h>
 
-const unsigned char key[17]	= "A0A1A2A3A4A5A6A7";
 const uint32_t CRC32_POLYNOMIAL = 0xEDB88320;
 const uint32_t CRC32_INITIAL_VALUE = 0xFFFFFFFF;
 
@@ -51,13 +50,6 @@ class appSw {
 			public:
 				virtual const char	*what() const throw(){
 					return ("Error: Path not found\n");
-				}
-		};
-
-		class	fileNotFound : public exception {
-			public:
-				virtual const char	*what() const throw(){
-					return ("Error: File not found\n");
 				}
 		};
 };
