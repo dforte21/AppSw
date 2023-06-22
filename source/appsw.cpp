@@ -34,7 +34,7 @@ void    appSw::runMenu(){
         enumOptions     opt = WRONG_OPT;
 
         do{
-                cout << "\nDELETE, UNTAR, DECRYPT, CRC\nInsert one option and specify a file (lowercase): ";
+                cout << "\nEXIT, DELETE, UNTAR, DECRYPT, CRC\nInsert one option and specify a file (lowercase): ";
                 getline(cin, input, '\n');
                 if (!input.length())
                         return ;
@@ -99,7 +99,7 @@ void    appSw::appDecrypt( string fileName ){
         return ;
     }
 
-    FILE* fout = fopen("trustboot", "wb");
+    FILE* fout = fopen("Trustboot.tar", "wb");
     if (fout == NULL) {
         printf("Impossibile creare il file di output.\n");
         fclose(fin);
